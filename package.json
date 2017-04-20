@@ -1,0 +1,19 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "basic dating app to find your friends",
+  "main": "friends.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dating-app",
+    "friend-finder"
+  ],
+  "author": "Greg Barone",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
