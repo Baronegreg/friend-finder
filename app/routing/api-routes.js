@@ -1,27 +1,16 @@
-// Search for Specific Character (or all characters) - provides JSON
-app.get("/api/:characters?", function(req, res) {
-  var chosen = req.params.characters;
+var friendsData = require("../data/friends.js");
+var bodyParser = require('body-parser');
 
-  if (chosen) {
-    co
-    for (var i = 0; i < characters.length; i++) {
-      if (chosen === characters[i].routeName) {
-       return res.json(characters[i]);
-      }
-    }
-    return res.json(false);
-  }
-  return res.json(characters);
-});
+// ===============================================================================
+// ROUTING
+// ===============================================================================
 
-// Create New Characters - takes in JSON input
-app.post("/api/new", function(req, res) {
-  var newcharacter = req.body;
-  newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
+module.exports = function(app) {
+  // API GET Request
+  // ---------------------------------------------------------------------------
 
-  console.log(newcharacter);
-
-  characters.push(newcharacter);
-
-  res.json(newcharacter);
-});
+  app.get("/api/friends", function(req, res) {
+    res.json(friendsData);
+  })
+};
+//==================================================================================  
